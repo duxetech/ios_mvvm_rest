@@ -12,7 +12,7 @@ class DataModel {
    
     let json = Server()
     
-    var names = [Contacts]() {
+    var contacts = [Contacts]() {
         didSet{
             reload()
         }
@@ -24,7 +24,7 @@ class DataModel {
       
         json.getData { con in
            
-            self.names = con
+            self.contacts = con
 
         }
     }

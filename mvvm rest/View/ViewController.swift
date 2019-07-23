@@ -21,7 +21,6 @@ class ViewController: UIViewController {
 
             }
         }
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     let net = DataModel()
@@ -32,12 +31,12 @@ class ViewController: UIViewController {
 
 extension ViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return net.names.count
+        return net.contacts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CVCell
-        cell.lbl.text = net.names[indexPath.row].name
+        cell.lbl.text = net.contacts[indexPath.row].name
         return cell
     }
     
